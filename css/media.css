@@ -1,0 +1,23 @@
+/*SMALL VIEWPORT*/
+@media screen and (max-width: 600px) {
+
+  .nav-unique {
+    width: 100vw;
+  }
+
+}
+
+/* LAPTOP VIEWPORT*/
+@media screen and (min-width: 1024px) {
+  
+}
+
+
+
+
+/* LAPTOP L VIEWPORT*/
+
+@media screen and (min-width: 1440px) {
+
+
+}
