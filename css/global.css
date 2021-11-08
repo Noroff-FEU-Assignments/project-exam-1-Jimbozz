@@ -1,0 +1,60 @@
+@import "/css/imports/variables.css";
+@import "/css/imports/links.css";
+
+
+html {
+  font-size: 100%;
+}
+
+html, body {
+  height: 100vh;
+}
+
+*, *:after, *:before {
+box-sizing: border-box;
+}
+
+body {
+  font-family: var(--text-paragraph);
+	font-size: calc(13px + 0.3vw);
+	line-height: 1.4;
+	margin: 0;
+	padding: 0;
+  color: var(--color-text);
+}
+
+h1, h2, h3 {
+  font-family: var(--text-heading), sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/*THEME LAYOUT*/
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: green;
+}
+
+header {
+  background: blue;
+  height: 100px;
+}
+
+main {
+  background: red;
+  flex-grow: 1;
+}
+
+footer {
+  background: purple;
+  height: 100px;
+}
+
+
+/*NAVIGATION*/
+
+.logo {
+  width: 130px;
+}
