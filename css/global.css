@@ -22,8 +22,8 @@ html, body {
 
 body {
   font-family: var(--text-paragraph);
-	font-size: calc(13px + 0.3vw);
-	line-height: 1.4;
+	font-size: calc(15px + 0.3vw);
+	line-height: 1.6;
 	margin: 0;
 	padding: 0;
   color: var(--color-text);
@@ -31,6 +31,10 @@ body {
 
 h1, h2, h3 {
   font-family: var(--text-heading), sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 
@@ -92,16 +96,6 @@ footer {
   border-radius: 7px;
 }
 
-@keyframes navFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
 
 .toggle .line1 {
   transform: rotate(-45deg) translate(-7px, 6px);
@@ -132,6 +126,7 @@ footer {
   transform: translateX(100%);
   transition: transform 0.5s ease-in;
   padding-top: 8rem;
+  margin-top: 0px;
 }
 
 .nav-active {
