@@ -44,27 +44,40 @@
 
 /*FEATURED POSTS SECTION*/
 
+.featured-container {
+  margin: 100px 0px;
+}
+
 .featured-text {
   text-align: center;
-  margin-bottom: 100px;
 }
 
 .featured-post {
   display: flex;
-  flex-direction: row-reverse;
   justify-content: space-between;
   gap: 3rem;
 }
 
 .one {
-  margin-right: 80px;
+  flex-direction: row-reverse;
+  margin: 0px 80px 200px 0px;
 }
+
+.two {
+  flex-direction: row;
+  margin-left: 80px;
+}
+
 .featured-title {
   margin-top: 0px;
 }
 
 .featured-image {
   max-width: 50vw;
+}
+
+.featured-post:hover .featured-title {
+  text-decoration: underline;
 }
 
 

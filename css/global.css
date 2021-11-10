@@ -141,6 +141,7 @@ footer {
   gap: 1rem;
 }
 
+/* Chrome */
 .scrolling-cards::-webkit-scrollbar {
   display: none;
 }
