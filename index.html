@@ -45,7 +45,7 @@
       </div>
     </section>
     <section class="latest-posts">
-      <div class="latest-posts-text">
+      <div class="scrolling-text">
         <h2>Latest posts</h2>
         <p class="section-description">A selection of this months featured artists stories.</p>
       </div>
@@ -91,7 +91,7 @@
       </div>
     </section>
     <section class="featured">
-      <div class="featured-text">
+      <div class="scrolling-text">
         <h2>Featured</h2>
         <p class="section-description">A selection of this months featured artists stories.</p>
       </div>
@@ -116,8 +116,68 @@
         </a>
       </div>
     </section>
+    <section class="contact-us">
+      <a class="contact-contents" href="#">
+        <h2>
+          We want to hear your stories. Get in touch if you have a story to tell.
+        </h2>
+      </a>
+    </section>
+    <section class="latest-posts">
+      <div class="scrolling-text">
+        <h2>Photography</h2>
+        <p class="section-description">A collection of the latest photography stories.</p>
+      </div>
+      <div class="button-wrapper">
+        <div class="arrow-button">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="arrow-button">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="scrolling-cards">
+          <a class="blog-link" href="#">
+            <article class="blog-card">
+              <img class="blog-card-image" src="/assets/images/frankie-cordoba-fPYJeMmYWM4-unsplash.jpg" />
+              <div class="article-details">
+                <address class="author">Jason Gennaro</address>
+                <h4 class="blog-card-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h4>
+              </div>
+            </article>
+          </a>
+          <a class="blog-link" href="#">
+            <article class="blog-card">
+              <img class="blog-card-image" src="/assets/images/frankie-cordoba-fPYJeMmYWM4-unsplash.jpg" />
+              <div class="article-details">
+                <address class="author">Jason Gennaro</address>
+                <h4 class="blog-card-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h4>
+              </div>
+            </article>
+          </a>
+          <a class="blog-link" href="#">
+            <article class="blog-card">
+              <img class="blog-card-image" src="/assets/images/frankie-cordoba-fPYJeMmYWM4-unsplash.jpg" />
+              <div class="article-details">
+                <address class="author">Jason Gennaro</address>
+                <h4 class="blog-card-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h4>
+              </div>
+            </article>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer>Footer section</footer>
+  <footer>
+  <div class="footer-content">
+    <h4 class="footer-heading">Get stories straight to your inbox?</h4>
+    <form action="#" method="POST" id="signup-form" class="footer-form">
+        <input type="email" name="email" class="footer-input" placeholder="Type email here...">
+        <input type="submit" form="signup-form" value="SIGN UP NOW" onclick="alert('Success!')" class="button">
+    </form>
+  </div>
+  </footer>
   <script src="/js/app.js"></script>
 </body>
 </html>

@@ -56,8 +56,31 @@ main {
 }
 
 footer {
-  background: purple;
-  height: 100px;
+  color: white;
+  min-height: 70vh;
+  background-color: var(--color-text);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.footer-form {
+  border: 1px solid white;
+  border-radius: 1px;
+  width: 40%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-input {
+  background: none;
+  border: none;
 }
 
 
@@ -128,7 +151,7 @@ footer {
 }
 
 
-/*SCROLLING BLOG CARDS*/
+/*HORIZONTAL SCROLLING BLOG CARDS*/
 
 .scrolling-cards {
   display: flex;
@@ -173,6 +196,14 @@ footer {
   margin: 60px 0px;
 }
 
+.scrolling-text {
+  text-align: center;
+}
+
+.scrolling-text > h2 {
+  margin-bottom: 0px;
+}
+
 .blog-link {
   color: var(--color-text);
 }
@@ -187,5 +218,9 @@ footer {
 
 .article-details {
   max-width: 400px;
+}
+
+.section-description {
+  margin-top: 0px;
 }
 
