@@ -14,8 +14,6 @@ html, body {
   width: 100%;
 }
 
-
-
 *, *:after, *:before {
   box-sizing: border-box;
 }
@@ -37,9 +35,6 @@ a {
   text-decoration: none;
 }
 
-
-
-
 /*THEME LAYOUT*/
 
 .page-wrapper {
@@ -57,7 +52,6 @@ header {
 }
 
 main {
-
   flex-grow: 1;
 }
 
@@ -68,8 +62,6 @@ footer {
 
 
 /*NAVIGATION*/
-
-
 
 .logo {
   width: 130px;
@@ -97,7 +89,6 @@ footer {
   transition: all 0.3s ease;
   border-radius: 7px;
 }
-
 
 .toggle .line1 {
   transform: rotate(-45deg) translate(-7px, 6px);
@@ -180,7 +171,6 @@ footer {
   position: relative;
   margin: 60px 0px;
 }
-
 
 .blog-link {
   color: var(--color-text);
