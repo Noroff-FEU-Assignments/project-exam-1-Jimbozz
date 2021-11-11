@@ -27,7 +27,8 @@ body {
   color: var(--color-text);
 }
 
-h1, h2, h3, h4 {
+
+h1, h2, h3, h4, .nav-style {
   font-family: var(--text-heading), sans-serif, Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -57,30 +58,8 @@ main {
 
 footer {
   color: white;
-  min-height: 70vh;
+  min-height: 80vh;
   background-color: var(--color-text);
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.footer-form {
-  border: 1px solid white;
-  border-radius: 1px;
-  width: 40%;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-input {
-  background: none;
-  border: none;
 }
 
 
@@ -143,11 +122,40 @@ footer {
   transition: transform 0.5s ease-in;
   padding-top: 8rem;
   margin-top: 0px;
+  gap: 21px;
 }
 
 .nav-active {
   transform: translateX(0%);
   margin-top: 0px;
+}
+
+.nav-style {
+  color: white;
+}
+
+.nav-style:hover {
+  text-decoration: underline;
+}
+
+.active {
+  color: var(--color-nav-links);
+}
+
+.blog-content {
+  display: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.blog-button {
+  background: none;
+  border: none;
+  color: white;
+}
+
+.secondary {
+  font-family: var(--text-paragraph);
 }
 
 
@@ -224,3 +232,60 @@ footer {
   margin-top: 0px;
 }
 
+/*FOOTER STYLES*/
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.footer-form {
+  border: 1px solid white;
+  border-radius: 1px;
+  width: 50vw;
+  min-width: 300px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-form-wrapper {
+  text-align: center;
+  margin-top: 180px;
+}
+
+.footer-input {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  width: 100%;
+}
+
+.footer-links {
+  font-size: 85%;
+}
+
+.footer-link-layout {
+  display: flex;
+  padding: 0px;
+  list-style-type: none;
+  text-decoration: none;
+  gap: 20px;
+}
+
+.footer-link-style {
+  color: white;
+}
+
+.footer-link-style:hover {
+  color: var(--color-nav-links);
+  text-decoration: underline;
+}

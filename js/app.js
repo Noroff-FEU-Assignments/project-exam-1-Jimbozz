@@ -1,3 +1,5 @@
+// Function for burger menu
+
 const navSlider = function() {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-unique');
@@ -11,5 +13,23 @@ const navSlider = function() {
 }
 
 navSlider();
+
+
+
+//Function for blog link dropdown in nav
+
+
+let blogButton = document.querySelector('.blog-button');
+let blogContent = document.querySelector('.blog-content');
+
+
+blogButton.addEventListener('click',function() {
+
+   if(blogContent.style.display === ""){
+      blogContent.style.display = "block";
+   } else {
+      blogContent.style.display = "";
+   }
+})
 
 

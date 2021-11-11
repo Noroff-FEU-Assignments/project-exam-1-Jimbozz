@@ -20,3 +20,8 @@
 .button-wrapper {
   padding: 50px 40px;
 }
+
+.footer-button {
+  background: none;
+  border: none;
+}
