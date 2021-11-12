@@ -27,9 +27,13 @@ blogButton.addEventListener('click',function() {
 
    if(blogContent.style.display === ""){
       blogContent.style.display = "block";
+      blogButton.style.transform = "rotate(180deg)";
+
    } else {
       blogContent.style.display = "";
+      blogButton.style.transform = "none";
    }
 })
+
 
 

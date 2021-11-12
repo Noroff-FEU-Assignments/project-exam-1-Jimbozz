@@ -144,6 +144,7 @@ footer {
 
 .nav-style {
   color: white;
+  margin-right: 10px;
 }
 
 .nav-style:hover {
@@ -171,6 +172,7 @@ footer {
 }
 
 
+
 /*HORIZONTAL SCROLLING BLOG CARDS*/
 
 .scrolling-cards {
@@ -187,10 +189,6 @@ footer {
 /* Chrome */
 .scrolling-cards::-webkit-scrollbar {
   display: none;
-}
-
-.blog-card {
-  flex: 0 0 auto;
 }
 
 .blog-card-title, .author {
@@ -213,7 +211,7 @@ footer {
 
 .latest-posts {
   position: relative;
-  margin: 60px 0px;
+  margin: 130px 0px;
 }
 
 .scrolling-text {

@@ -1,15 +1,65 @@
 /*SMALL VIEWPORT*/
 @media screen and (max-width: 600px) {
-
+  /*HAMBURGER MENU*/
   .nav-unique {
     width: 100vw;
   }
 
+  /*BLOG ARTICLE*/
+  .article-wrapper {
+    width: 80vw;
+  }
+
+  /*INDEX PAGE - LATEST POSTS*/
+
+  .blog-card-image {
+    width: 70vw;
+  }
+
+  /*INDEX PAGE - FEATURED SECTION*/
+
+  .one {
+    flex-flow: column-reverse;
+    margin: 80px 0px;
+  }
+  .two {
+    flex-flow: column-reverse;
+    margin: 0px;
+  }
+
+  .second-image {
+    margin-left: 33px;
+  }
+
+  .featured-image {
+    max-width: 90vw;
+  }
+
+  .featured-text-container {
+    text-align: center;
+    margin: 0px 20px;
+    
+  }
+
 }
+
+/*MEDIUM VIEWPORT (Ipad)*/
+
+@media screen and (max-width: 768px) {
+
+  .button-wrapper {
+    display: none;
+  }
+}
+
+
+
 
 /* LAPTOP VIEWPORT*/
 @media screen and (min-width: 1024px) {
   
+ 
+
 }
 
 
@@ -19,5 +69,10 @@
 
 @media screen and (min-width: 1440px) {
 
+ /*INDEX PAGE - LATEST POSTS*/
+
+ .blog-card-image {
+  width: 40vw;
+}
 
 }
