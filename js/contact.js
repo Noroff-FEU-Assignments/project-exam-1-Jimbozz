@@ -16,8 +16,19 @@ async function sendForm(event) {
     body: new FormData(form)
   });
     const data = await response.json();
+
+   
    
   }catch(error) {
     console.warn(error);
+
+    form.onsubmit = function formSuccess() {
+      form.innerHTML = `
+                      <div class="success"> Your form was submitted successfully.
+                      </div>
+                        `
+    }
   }
 }
+
+
