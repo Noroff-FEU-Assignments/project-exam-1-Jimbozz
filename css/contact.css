@@ -1,6 +1,33 @@
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  border: 0;
+  outline: 0;
+  color: var(--color-text);;
+}
+
 .contact {
   background: #F9E8D9;
 }
+
+.contact-button {
+  width: 20%;
+  height: 3rem;
+  align-self: flex-end;
+  background: var(--color-text);
+  border: 1px solid var(--color-text);
+  color: white;
+}
+.contact-button:hover {
+  background: white;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+}
+
+
 
 .form-container {
   max-width: 800px;
@@ -25,18 +52,18 @@
 
 .form-control:valid {
   border: 1px solid var(--color-success);
-  background: none;
+  background: green;
 }
 
 .form-control:invalid {
   background: var(--warning);
 }
 
-.form-control:valid + small {
+.form-control:valid + .error-message {
   display: none;
 }
 
-.form-control:invalid + small {
+.form-control:invalid + .error-message {
   display: block;
 }
 
@@ -65,4 +92,13 @@
 .error-message {
   display: none;
   color: red;
+}
+
+
+------
+.form-control:placeholder-shown {
+  border-color: black;
+}
+.form-control:placeholder-shown + small {
+  display: none;
 }

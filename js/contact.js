@@ -18,7 +18,6 @@ async function sendForm(event) {
     const data = await response.json();
 
    
-   
   }catch(error) {
     console.warn(error);
 
