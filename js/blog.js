@@ -1,17 +1,50 @@
-const url = "http://localhost/makers/wp-json/wp/v2/posts?_embed";
-
-
+const url = "http://localhost/makers/wp-json/wp/v2/posts?per_page=10&_embed";
+const newUrl = "http://localhost/makers/wp-json/wp/v2/posts?per_page=4&_embed";
+const loadMore = document.querySelector('.load-more');
 const blogContainer = document.querySelector(".blog-container");
 
-console.log(url);
+
 
 async function getProducts() {
 
   try {
-     const response = await fetch(url);
-     const getResults = await response.json();
-     createHTML(getResults);
-     console.log(getResults);
+    const response = await fetch(url);
+    const getResults = await response.json();
+    createHTML(getResults)
+    console.log(getResults);
+
+    var clicked = false
+
+    loadMore.addEventListener('click', function() {
+
+      async function moreProducts() {
+        try {
+          const response = await fetch(newUrl);
+          const newResults = await response.json();
+          console.log(newResults);
+
+          clicked = true
+    
+          if(clicked === true) {
+            console.log(newUrl); 
+            // createHTML(getResults.slice(-4));
+            createHTML(newResults)
+            
+          }else if(clicked === false) {
+            return false
+            
+          }else {
+            return false
+          }
+        }
+        catch(error) {
+          console.log("this is an error");
+        }
+
+      }
+      moreProducts();
+    })
+     
   }
   catch(error) {
     console.log("what happened here!");
@@ -39,3 +72,32 @@ function createHTML(posts) {
       
   })
 }
+
+// function createHTML(posts) {
+  
+//   for(let i = 0; i < post.length; i++) {
+//     console.log("working!");
+//   }
+  
+// }
+
+
+
+
+////
+
+
+
+
+
+
+
+// if (click === false) {
+//   display first 10
+  // createHTML(getResults.array[10]); 
+// }else if(click === true) {
+//   display the rest of the posts
+// }
+
+
+
