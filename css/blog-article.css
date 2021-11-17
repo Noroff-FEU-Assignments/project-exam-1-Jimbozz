@@ -3,7 +3,7 @@
 
 .blog-header {
   height: 80vh;
-  background: url(/assets/images/frankie-cordoba-fPYJeMmYWM4-unsplash.jpg) no-repeat center center fixed;
+  background:  no-repeat center center fixed;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -51,3 +51,24 @@
   
   font-size: 150%;
 }
+
+.article-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-text img {
+  width: 100%;
+  height: auto;
+}
+
+.wp-block-image {
+  margin: 30px 0px;
+}
+.wp-block-quote {
+  font-family: var(--text-heading);
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+

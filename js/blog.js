@@ -11,7 +11,6 @@ async function getProducts() {
     const response = await fetch(url);
     const getResults = await response.json();
     createHTML(getResults)
-    console.log(getResults);
     
 
     var clicked = false
@@ -22,13 +21,10 @@ async function getProducts() {
         try {
           const response = await fetch(newUrl);
           const newResults = await response.json();
-          console.log(newResults);
 
           clicked = true
     
-          if(clicked === true) {
-            console.log(newUrl); 
-            // createHTML(getResults.slice(-4));
+          if(clicked) { 
             blogContainer.innerHTML = "";
             createHTML(newResults)
 
@@ -57,9 +53,11 @@ function createHTML(posts) {
   posts.forEach(function(post) {
     let image = post._embedded["wp:featuredmedia"][0].source_url;
     let imageText = post._embedded["wp:featuredmedia"][0].alt_text;
+    let id = post._embedded["wp:featuredmedia"][0].id;
+    console.log(id);
 
     blogContainer.innerHTML += `
-    <a class="blog-link" href="#">
+    <a class="blog-link" href="/blog-article.html?id=${id}">
     <article class="blog-card">
       <img class="blog-image" src="${image}" alt="${imageText}">
       <address class="author">${post._embedded.author[0].name}</address>
