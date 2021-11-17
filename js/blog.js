@@ -1,5 +1,5 @@
 const url = "http://localhost/makers/wp-json/wp/v2/posts?per_page=10&_embed";
-const newUrl = "http://localhost/makers/wp-json/wp/v2/posts?per_page=4&_embed";
+const newUrl = "http://localhost/makers/wp-json/wp/v2/posts?per_page=20&_embed";
 const loadMore = document.querySelector('.load-more');
 const blogContainer = document.querySelector(".blog-container");
 
@@ -12,6 +12,7 @@ async function getProducts() {
     const getResults = await response.json();
     createHTML(getResults)
     console.log(getResults);
+    
 
     var clicked = false
 
@@ -28,19 +29,16 @@ async function getProducts() {
           if(clicked === true) {
             console.log(newUrl); 
             // createHTML(getResults.slice(-4));
+            blogContainer.innerHTML = "";
             createHTML(newResults)
-            
-          }else if(clicked === false) {
-            return false
-            
+
           }else {
-            return false
+           false
           }
         }
         catch(error) {
           console.log("this is an error");
         }
-
       }
       moreProducts();
     })
@@ -58,33 +56,21 @@ getProducts();
 function createHTML(posts) {
   posts.forEach(function(post) {
     let image = post._embedded["wp:featuredmedia"][0].source_url;
+    let imageText = post._embedded["wp:featuredmedia"][0].alt_text;
 
     blogContainer.innerHTML += `
     <a class="blog-link" href="#">
     <article class="blog-card">
-      <img class="blog-image" src="${image}" alt="">
+      <img class="blog-image" src="${image}" alt="${imageText}">
       <address class="author">${post._embedded.author[0].name}</address>
-      <h4 class="blog-card-title">This will be the best blog post ever</h4>
+      <h4 class="blog-card-title">${post.title.rendered}</h4>
     </article>
-  </a>
-      `;
-    
+    </a>`
+    ;
       
   })
 }
 
-// function createHTML(posts) {
-  
-//   for(let i = 0; i < post.length; i++) {
-//     console.log("working!");
-//   }
-  
-// }
-
-
-
-
-////
 
 
 
@@ -92,12 +78,6 @@ function createHTML(posts) {
 
 
 
-// if (click === false) {
-//   display first 10
-  // createHTML(getResults.array[10]); 
-// }else if(click === true) {
-//   display the rest of the posts
-// }
 
 
 
