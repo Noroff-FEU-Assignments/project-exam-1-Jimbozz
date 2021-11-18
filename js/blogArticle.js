@@ -15,7 +15,7 @@ console.log(finalId);
 
 
 
-const url = "http://localhost/makers/wp-json/wp/v2/posts/" + finalId;
+const url = "http://localhost/makers/wp-json/wp/v2/posts/" + finalId + "?&_embed";
 
 
 
@@ -51,10 +51,10 @@ blogInfo();
 
 function createHTML(result) {
   
-  // let image = result[0]._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url;
-  // let genre = result[0]._embedded["wp:term"][0][0].slug;
+  let image = result._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url;
+  let genre = result._embedded["wp:term"][0][0].slug;
 
-  headerImage.style.backgroundImage = `url(${result.featured_image_url})`;
+  headerImage.style.backgroundImage = `url(${image})`;
 
 
   let htmlString = "";
@@ -62,7 +62,7 @@ function createHTML(result) {
 //Need to figure out way of getting GENRE
   htmlString += `
     <section class="article-heading">
-      <div class="genre">hello</div>
+      <div class="genre">${genre}</div>
       <h1 class="article-title">${result.title.rendered}</h1>
     </section>
     <div class=article-text>
