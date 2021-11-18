@@ -5,7 +5,7 @@ const blogContainer = document.querySelector(".blog-container");
 
 
 
-async function getProducts() {
+async function getPosts() {
 
   try {
     const response = await fetch(url);
@@ -18,7 +18,7 @@ async function getProducts() {
 
     loadMore.addEventListener('click', function() {
 
-      async function moreProducts() {
+      async function morePosts() {
         try {
           const response = await fetch(newUrl);
           const newResults = await response.json();
@@ -38,7 +38,7 @@ async function getProducts() {
           console.log("this is an error");
         }
       }
-      moreProducts();
+      morePosts();
     })
      
   }
@@ -48,7 +48,7 @@ async function getProducts() {
   }
 }
 
-getProducts();
+getPosts();
 
 
 function createHTML(posts) {
