@@ -71,4 +71,8 @@
   font-size: 1.8rem;
 }
 
-
+.blog-card-image {
+  height: 27vw;
+  object-fit: cover;
+  
+}
