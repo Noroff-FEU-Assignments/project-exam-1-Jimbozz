@@ -96,6 +96,13 @@ function createModal() {
       node.appendChild(textnode); 
       document.querySelector("figure").appendChild(node);
       node.className = "close-button"
+
+
+      // node.onclick = function() {
+      //   // figure.classList.toggle("modal1");
+      //   figure.classList.value("");
+      //   console.log("clicked");
+      // }
       
       figure.addEventListener("click", function() {
         
@@ -103,23 +110,16 @@ function createModal() {
         clicked = true
     
           if(clicked) { 
-            figure.classList.add("modal");
+            figure.classList.toggle("modal");
             console.log("hello")
             
             node.style.display = "block";
 
-            // const html_to_insert = `
-            // <div class="modal-text>Hello</div>
-            // <span>Hello</span>
-            // `;
-
-            // figure.insertAdjacentHTML('afterbegin', html_to_insert)
+            
 
             
 
-            node.onclick = function() {
-              figure.classList.remove("modal");
-            }
+            
 
           }else if(!clicked) {
             figure.classList.remove("modal");

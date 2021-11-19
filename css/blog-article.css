@@ -60,6 +60,7 @@
 .article-text img {
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 .wp-block-image {
@@ -80,10 +81,11 @@
 /*modal styling*/
 
 .modal {
-  display: block;
+  display: flex;
   position: fixed;
   z-index: 1000;
   padding: 10px 62px 0px 62px;
+  margin: 0px;
   left: 0;
   top: 0;
   width: 100%;
@@ -92,16 +94,12 @@
   background-color: #000000c7;
 }
 
-.modal-text {
-  display: block;
-  z-index: inherit;
-}
+
 
 .close-button {
   display: none;
+  color: white;
 }
-.close-button2 {
-  display: block;
-}
+
 
 
