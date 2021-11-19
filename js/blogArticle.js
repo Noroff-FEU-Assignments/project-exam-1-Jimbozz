@@ -28,20 +28,12 @@ async function blogInfo() {
     title.innerHTML = `${result.title.rendered}`;
     wrapper.innerHTML = "";
 
-    //See if there is another way to add class name to image
-
-    window.onload = function() {
-      const image3 = document.querySelector('.wp-block-image');
-      image3.classList.add ("modal");
-    };
-
-    createHTML(result);
-
-
-    createModal();
-  
     
+    createHTML(result);
+    createModal();
 
+
+    
    
   }
   catch(error) {
@@ -93,11 +85,51 @@ function createHTML(result) {
 function createModal() {
 
   
+
   const figures = document.querySelectorAll('figure');
+  
     for (let figure of figures) {
+
+      //Inserts close button
+      var node = document.createElement("SPAN");
+      var textnode = document.createTextNode("Hello");
+      node.appendChild(textnode); 
+      document.querySelector("figure").appendChild(node);
+      node.className = "close-button"
+      
       figure.addEventListener("click", function() {
-        // figure.className += " modal";
-        console.log("hello")
+        
+
+        clicked = true
+    
+          if(clicked) { 
+            figure.classList.add("modal");
+            console.log("hello")
+            
+            node.style.display = "block";
+
+            // const html_to_insert = `
+            // <div class="modal-text>Hello</div>
+            // <span>Hello</span>
+            // `;
+
+            // figure.insertAdjacentHTML('afterbegin', html_to_insert)
+
+            
+
+            node.onclick = function() {
+              figure.classList.remove("modal");
+            }
+
+          }else if(!clicked) {
+            figure.classList.remove("modal");
+          }
+      
+
+        // const modal = document.querySelector('.modal');
+        // modal.innerHTML += `
+        // <div class="modal-text>Hello</div>
+        // `;
       })
     }
 
