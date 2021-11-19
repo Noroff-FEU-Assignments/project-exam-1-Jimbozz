@@ -3,22 +3,17 @@ const wrapper = document.querySelector('.article-wrapper');
 const blogText = document.querySelector('.article-wrapper');
 const blogHeading = document.querySelector('.article-heading');
 const headerImage = document.querySelector('.blog-header');
-
 const title = document.querySelector('title');
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
-
 const id = params.get('id');
 const finalId = parseInt(id)
 
-console.log(finalId);
 
 
 const url = "http://localhost/makers/wp-json/wp/v2/posts/" + finalId + "?&_embed";
 
 
-
-console.log(url);
 
 async function blogInfo() {
   try {
@@ -32,9 +27,6 @@ async function blogInfo() {
     createHTML(result);
     createModal();
 
-
-    
-   
   }
   catch(error) {
     console.log(error);
@@ -47,12 +39,11 @@ blogInfo();
 
 
 
+//Function for creation of HTML
 
 function createHTML(result) {
   
   let image = result._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url;
-  
-  
   let genre = result._embedded["wp:term"][0][0].slug;
 
   headerImage.style.backgroundImage = `url(${image})`;
@@ -73,87 +64,41 @@ function createHTML(result) {
             <li><a class="article-link" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A5500%2Fblog-article.html&amp;src=sdkpreparse" target="_blank">Facebook</a></li>
             <li><a class="article-link" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fblog-article.com%2F">Twitter</a></li>
           </ul>
-        </section>
-    
-  `
+        </section>`
   ;
 
   wrapper.innerHTML = htmlString;
 }
 
-//Function for modal
-function createModal() {
 
-  
+//Function for modal
+
+function createModal() {
 
   const figures = document.querySelectorAll('figure');
   
-    for (let figure of figures) {
+  for (let figure of figures) {
 
-      //Inserts close button
-      var node = document.createElement("SPAN");
-      var textnode = document.createTextNode("Hello");
-      node.appendChild(textnode); 
-      document.querySelector("figure").appendChild(node);
-      node.className = "close-button"
+    //Inserts close button
+    var node = document.createElement("SPAN");
+    var textnode = document.createTextNode("Hello");
+    node.appendChild(textnode); 
+    document.querySelector("figure").appendChild(node);
+    node.className = "close-button"
 
 
-      // node.onclick = function() {
-      //   // figure.classList.toggle("modal1");
-      //   figure.classList.value("");
-      //   console.log("clicked");
-      // }
-      
-      figure.addEventListener("click", function() {
-        
-
-        clicked = true
     
-          if(clicked) { 
-            figure.classList.toggle("modal");
-            console.log("hello")
-            
-            node.style.display = "block";
-
-            
-
-            
-
-            
-
-          }else if(!clicked) {
-            figure.classList.remove("modal");
-          }
+    figure.addEventListener("click", function() {
       
-
-        // const modal = document.querySelector('.modal');
-        // modal.innerHTML += `
-        // <div class="modal-text>Hello</div>
-        // `;
-      })
-    }
-
-
-
+      clicked = true
+  
+        if(clicked) { 
+          figure.classList.toggle("modal");
+          
+          node.style.display = "block";
+        }
+    
+    });
+  }
 }
-
-
-
-// window.onload = function(){
-  
-  
-//   const blogImage = document.querySelector(".wp-block-image");
-//   console.log(blogImage);
-
-//   // blogImage.onclick = function() {
-//   //   // blogImage.classlist.add('modal');
-//   //   console.log("clicked");
-//   // } 
-
-//   blogImage.addEventListener('click', function() {
-//     console.log("you clicked");
-//     // this.classlist.add("modal")
-//   })
-// };
-
 
