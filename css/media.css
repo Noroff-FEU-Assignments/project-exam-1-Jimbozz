@@ -1,22 +1,22 @@
 /*SMALL VIEWPORT*/
 @media screen and (max-width: 600px) {
-  /*HAMBURGER MENU*/
+  /*hamburger menu*/
   .nav-unique {
     width: 100vw;
   }
 
-  /*BLOG ARTICLE*/
+  /*blog article*/
   .article-wrapper {
     width: 80vw;
   }
 
-  /*INDEX PAGE - LATEST POSTS*/
+  /*index page - latest posts*/
 
   .blog-card-image {
     width: 70vw;
   }
 
-  /*INDEX PAGE - FEATURED SECTION*/
+  /*index page - featured section*/
 
   .one {
     flex-flow: column-reverse;
@@ -38,8 +38,9 @@
   .featured-text-container {
     text-align: center;
     margin: 0px 20px;
-    
   }
+
+
 
 }
 
@@ -50,6 +51,13 @@
   .button-wrapper {
     display: none;
   }
+
+  /*blog specific page - modal styling*/
+
+  .modal {
+    padding: 0px;
+  }
+  
 }
 
 

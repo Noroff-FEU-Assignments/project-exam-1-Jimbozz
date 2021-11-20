@@ -80,14 +80,10 @@ function createModal() {
   for (let figure of figures) {
 
     //Inserts close button
-    var node = document.createElement("SPAN");
-    var textnode = document.createTextNode("Hello");
-    node.appendChild(textnode); 
+    var node = document.createElement("I"); 
     document.querySelector("figure").appendChild(node);
-    node.className = "close-button"
+    node.className = "fas fa-times"
 
-
-    
     figure.addEventListener("click", function() {
       
       clicked = true
@@ -101,4 +97,6 @@ function createModal() {
     });
   }
 }
+
+
 

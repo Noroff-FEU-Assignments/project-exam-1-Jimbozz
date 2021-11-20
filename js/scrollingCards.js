@@ -24,11 +24,14 @@ getCards();
 
 function createPosts(posts) {
   posts.forEach(function(post) {
+
+    let blogImage = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+    
     
     container.innerHTML += `
           <a class="blog-link" href="/blog-article.html?id=${post.id}">
             <article class="blog-card">
-              <img class="blog-card-image" src="${post.featured_image_url}"/>
+              <img class="blog-card-image" src="${blogImage}"/>
               <div class="article-details">
                 <address class="author">${post._embedded.author[0].name}</address>
                 <h4 class="blog-card-title">${post.title.rendered}</h4>
