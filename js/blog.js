@@ -53,17 +53,17 @@ getPosts();
 
 function createHTML(posts) {
   posts.forEach(function(post) {
-    let image = post._embedded["wp:featuredmedia"][0].source_url;
+    let image = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
     let imageText = post._embedded["wp:featuredmedia"][0].alt_text;
     
 
     blogContainer.innerHTML += `
     <a class="blog-link" href="/blog-article.html?id=${post.id}">
-    <article class="blog-card">
-      <img class="blog-image" src="${image}" alt="${imageText}">
-      <address class="author">${post._embedded.author[0].name}</address>
-      <h4 class="blog-card-title">${post.title.rendered}</h4>
-    </article>
+      <article class="blog-card">
+        <img class="blog-image" src="${image}" alt="${imageText}">
+        <address class="author">${post._embedded.author[0].name}</address>
+        <h4 class="blog-card-title">${post.title.rendered}</h4>
+      </article>
     </a>`
     ;
       

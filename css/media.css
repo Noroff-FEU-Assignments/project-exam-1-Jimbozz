@@ -10,6 +10,17 @@
     width: 80vw;
   }
 
+  /*blog page - layout*/
+
+  .blog-container {
+    margin: 30px;
+  }
+
+  .blog-image {
+    height: 22vh;
+  }
+
+  
   /*index page - latest posts*/
 
   .blog-card-image {
@@ -57,7 +68,13 @@
   .modal {
     padding: 0px;
   }
-  
+
+  /*blog page - layout*/
+
+  .blog-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
 }
 
 
