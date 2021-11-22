@@ -37,6 +37,9 @@
 
 .featured-container {
   margin: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 
 .featured-post {
@@ -44,12 +47,13 @@
   gap: 3rem;
 }
 
-.one {
+.featured-container > .blog-link:first-child > article {
   flex-direction: row-reverse;
-  margin: 0px 80px 200px 0px;
+  margin-right: 80px;
+  
 }
 
-.one:last-child {
+.featured-container > .blog-link:last-child > article {
   flex-direction: row;
   margin-left: 80px;
 }

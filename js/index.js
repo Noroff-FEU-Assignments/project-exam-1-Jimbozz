@@ -2,7 +2,7 @@
 //Hero section on homepage.
 async function getHero() {
 
-  let heroUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=2&per_page=1&_embed";
+  var heroUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=2&per_page=1&_embed";
 
   try {
     const response = await fetch(heroUrl);
@@ -22,9 +22,9 @@ getHero();
 
 function createHero(post) {
 
-  let heroContainer = document.querySelector('.hero');
-  let image = post[0]._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
-  let genre = post[0]._embedded["wp:term"][0][0].name;
+  var heroContainer = document.querySelector('.hero');
+  var image = post[0]._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+  var genre = post[0]._embedded["wp:term"][0][0].name;
   
   
   heroContainer.style.backgroundImage = `url(${image})`;
@@ -49,7 +49,7 @@ function createHero(post) {
 
 async function getFeatured() {
 
-  let featuredUrl = "http://localhost/makers/wp-json/wp/v2/posts?tags=10&_embed";
+  var featuredUrl = "http://localhost/makers/wp-json/wp/v2/posts?tags=10&_embed";
 
   try {
     const response = await fetch(featuredUrl);
@@ -71,17 +71,17 @@ getFeatured();
 
 
 function createFeatured(posts) {
+  
   posts.forEach(function(post) {
+    
 
-    let featuredContainer = document.querySelector('.featured-container');
+    var featuredContainer = document.querySelector('.featured-container');
 
-    let blogImage = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
-    
-    
-    
+   
+   
     featuredContainer.innerHTML += `
         <a class="blog-link" href="#">
-          <article class="featured-post one">
+          <article class="featured-post">
             <div class="featured-text-container">
               <h4 class="featured-title">Art piece title</h4>
               <p class="featured-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, excepturi commodi asperiores perferendis fugit voluptate deleniti! Delectus natus tenetur eligendi labore.</p>
