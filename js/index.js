@@ -2,7 +2,7 @@
 //Hero section on homepage.
 async function getHero() {
 
-  var heroUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=2&per_page=1&_embed";
+  let heroUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=2&per_page=1&_embed";
 
   try {
     const response = await fetch(heroUrl);
@@ -22,9 +22,9 @@ getHero();
 
 function createHero(post) {
 
-  var heroContainer = document.querySelector('.hero');
-  var image = post[0]._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
-  var genre = post[0]._embedded["wp:term"][0][0].name;
+  let heroContainer = document.querySelector('.hero');
+  let image = post[0]._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+  let genre = post[0]._embedded["wp:term"][0][0].name;
   
   
   heroContainer.style.backgroundImage = `url(${image})`;

@@ -24,7 +24,8 @@
   /*index page - latest posts*/
 
   .blog-card-image {
-    width: 70vw;
+    width: 15rem;
+    height: 10rem;
   }
 
   /*index page - featured section*/
