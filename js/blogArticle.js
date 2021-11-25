@@ -11,7 +11,7 @@ const finalId = parseInt(id)
 
 
 
-const url = "http://localhost/makers/wp-json/wp/v2/posts/" + finalId + "?&_embed";
+const url = "http://makerstories.no/index.php/wp-json/wp/v2/posts/" + finalId + "?&_embed";
 
 
 
