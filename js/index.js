@@ -73,6 +73,8 @@ getFeatured();
 function createFeatured(posts) {
   
   posts.forEach(function(post) {
+
+    var featureImage = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
     
 
     var featuredContainer = document.querySelector('.featured-container');
@@ -80,13 +82,13 @@ function createFeatured(posts) {
    
    
     featuredContainer.innerHTML += `
-        <a class="blog-link" href="#">
+        <a class="blog-link" href="/blog-article.html?id=${post.id}">
           <article class="featured-post">
             <div class="featured-text-container">
-              <h4 class="featured-title">Art piece title</h4>
-              <p class="featured-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, excepturi commodi asperiores perferendis fugit voluptate deleniti! Delectus natus tenetur eligendi labore.</p>
+              <h4 class="featured-title">${post.title.rendered}</h4>
+              <p class="featured-description">${post.excerpt.rendered}</p>
             </div>
-            <img class="featured-image" src="/assets/images/frankie-cordoba-fPYJeMmYWM4-unsplash.jpg" />
+            <img class="featured-image" src="${featureImage}" />
           </article>
         </a>`
     ; 

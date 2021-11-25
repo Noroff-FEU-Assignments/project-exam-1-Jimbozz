@@ -51,11 +51,23 @@
     margin: 0px 20px;
   }
 
+  /*home page - featured layout*/
 
+  .featured-container > .blog-link:first-child > article {
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    margin: 0px;
+  }
+  
+  .featured-container > .blog-link:last-child > article {
+    flex-direction: column-reverse;
+    margin: 0px;
+    flex-wrap: wrap-reverse;
+  }
 
 }
 
-/*MEDIUM VIEWPORT (Ipad)*/
+/*MEDIUM VIEWPORT*/
 
 @media screen and (max-width: 768px) {
 
@@ -74,6 +86,8 @@
   .blog-container {
     grid-template-columns: 1fr 1fr;
   }
+
+  
 
 }
 
