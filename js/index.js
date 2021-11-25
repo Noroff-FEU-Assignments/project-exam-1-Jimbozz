@@ -2,7 +2,7 @@
 //Hero section on homepage.
 async function getHero() {
 
-  let heroUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=2&per_page=1&_embed";
+  let heroUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?categories=2&per_page=1&_embed";
 
   try {
     const response = await fetch(heroUrl);
@@ -49,7 +49,7 @@ function createHero(post) {
 
 async function getFeatured() {
 
-  var featuredUrl = "http://localhost/makers/wp-json/wp/v2/posts?tags=10&_embed";
+  var featuredUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?tags=10&_embed";
 
   try {
     const response = await fetch(featuredUrl);

@@ -1,7 +1,7 @@
 const container = document.querySelector('.scrolling-cards');
 const photoWrapper = document.querySelector('.photography');
-const postsUrl = "http://localhost/makers/wp-json/wp/v2/posts?per_page=20&_embed";
-const photoUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=2&_embed";
+const postsUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?per_page=20&_embed";
+const photoUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?categories=2&_embed";
 
 
 

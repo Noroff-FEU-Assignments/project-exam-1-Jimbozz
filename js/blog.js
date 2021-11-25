@@ -1,5 +1,5 @@
-const url = "http://localhost/makers/wp-json/wp/v2/posts?per_page=10&_embed";
-const newUrl = "http://localhost/makers/wp-json/wp/v2/posts?per_page=20&_embed";
+const url = "http://makerstories.no/index.php/wp-json/wp/v2/posts?per_page=10&_embed";
+const newUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?per_page=20&_embed";
 const loadMore = document.querySelector('.load-more');
 const blogContainer = document.querySelector(".blog-container");
 
