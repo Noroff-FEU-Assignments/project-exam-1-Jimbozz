@@ -45,6 +45,9 @@ function createHTML(result) {
   
   let image = result._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url;
   let genre = result._embedded["wp:term"][0][0].slug;
+  let genreUp = genre.charAt(0).toUpperCase() + genre.slice(1);
+
+  
 
   headerImage.style.backgroundImage = `url(${image})`;
 
@@ -52,7 +55,7 @@ function createHTML(result) {
 
   htmlString += `
     <section class="article-heading">
-      <div class="genre">${genre}</div>
+      <div class="genre">${genreUp}</div>
       <h1 class="article-title">${result.title.rendered}</h1>
     </section>
     <div class=article-text>
