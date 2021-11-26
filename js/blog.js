@@ -1,5 +1,7 @@
 const url = "http://makerstories.no/index.php/wp-json/wp/v2/posts?per_page=10&_embed";
+const corsEnabledOne = "https://noroffcors.herokuapp.com/" + url;
 const newUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?per_page=20&_embed";
+const corsEnabledTwo = "https://noroffcors.herokuapp.com/" + newUrl;
 const loadMore = document.querySelector('.load-more');
 const blogContainer = document.querySelector(".blog-container");
 
@@ -8,7 +10,7 @@ const blogContainer = document.querySelector(".blog-container");
 async function getPosts() {
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(corsEnabledOne);
     const getResults = await response.json();
     createHTML(getResults)
     
@@ -20,7 +22,7 @@ async function getPosts() {
 
       async function morePosts() {
         try {
-          const response = await fetch(newUrl);
+          const response = await fetch(corsEnabledTwo);
           const newResults = await response.json();
           console.log(newResults);
 
