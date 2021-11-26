@@ -13,11 +13,13 @@ const finalId = parseInt(id)
 
 const url = "http://makerstories.no/index.php/wp-json/wp/v2/posts/" + finalId + "?&_embed";
 
+const corsEnabledArticle = "https://noroffcors.herokuapp.com/" + url;
+
 
 
 async function blogInfo() {
   try {
-    const response = await fetch(url);
+    const response = await fetch(corsEnabledArticle);
     const result = await response.json();
    
     title.innerHTML = `${result.title.rendered}`;

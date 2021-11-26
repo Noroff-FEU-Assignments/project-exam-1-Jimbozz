@@ -4,8 +4,10 @@ async function getHero() {
 
   let heroUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?categories=2&per_page=1&_embed";
 
+  const corsEnabledIndex = "https://noroffcors.herokuapp.com/" + heroUrl;
+
   try {
-    const response = await fetch(heroUrl);
+    const response = await fetch(corsEnabledIndex);
     const heroResults = await response.json();
     console.log(heroResults);
     createHero(heroResults);
@@ -51,8 +53,10 @@ async function getFeatured() {
 
   var featuredUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?tags=10&_embed";
 
+  const corsEnabledFeatured = "https://noroffcors.herokuapp.com/" + featuredUrl;
+
   try {
-    const response = await fetch(featuredUrl);
+    const response = await fetch(corsEnabledFeatured);
     const featuredResults = await response.json();
     console.log(featuredResults);
     createFeatured(featuredResults);

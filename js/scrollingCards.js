@@ -1,14 +1,16 @@
 const container = document.querySelector('.scrolling-cards');
 const photoWrapper = document.querySelector('.photography');
 const postsUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?per_page=20&_embed";
+const corsEnabledPosts = "https://noroffcors.herokuapp.com/" + postsUrl;
 const photoUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?categories=2&_embed";
+const corsEnabledPhoto = "https://noroffcors.herokuapp.com/" + photoUrl;
 
 
 
 async function getCards() {
 
   try {
-    const response = await fetch(postsUrl);
+    const response = await fetch(corsEnabledPosts);
     const results = await response.json();
     console.log(results);
     createPosts(results);
@@ -20,7 +22,7 @@ async function getCards() {
     console.log(error);
   }
   try {
-    const response = await fetch(photoUrl);
+    const response = await fetch(corsEnabledPhoto);
     const results = await response.json();
     console.log(results);
     createCards(results)
