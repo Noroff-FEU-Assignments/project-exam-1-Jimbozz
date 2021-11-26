@@ -78,13 +78,14 @@ function createHTML(posts) {
 var clicked = false;
 
 const filterAll = document.querySelector('.filter-all');
-const allUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=1&per_page=20&_embed";
+const allUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?categories=1&per_page=20&_embed";
+const corsAll = "https://noroffcors.herokuapp.com/" + allUrl;
 
 filterAll.addEventListener('click', function() {
   
   async function filter() {
     try {
-      const response = await fetch(allUrl);
+      const response = await fetch(corsAll);
       const filterResults = await response.json();
       console.log(filterResults);
       clicked = true
@@ -108,13 +109,14 @@ filterAll.addEventListener('click', function() {
 })
 
 
-const photoUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=2&_embed";
+const photoUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?categories=2&_embed";
+const corsPhoto = "https://noroffcors.herokuapp.com/" + photoUrl;
 const filterPhotography = document.querySelector('.filter-photo');
 filterPhotography.addEventListener('click', function() {
   
   async function filter() {
     try {
-      const response = await fetch(photoUrl);
+      const response = await fetch(corsPhoto);
       const filterResults = await response.json();
       console.log(filterResults);
       loadMore.style.display = "none";
@@ -136,13 +138,14 @@ filterPhotography.addEventListener('click', function() {
 
 })
 
-const illustrationUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=4&_embed";
+const illustrationUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?categories=4&_embed";
+const corsIllustration = "https://noroffcors.herokuapp.com/" + illustrationUrl;
 const filterIllustration = document.querySelector('.filter-illustration');
 filterIllustration.addEventListener('click', function() {
   
   async function filter() {
     try {
-      const response = await fetch(illustrationUrl);
+      const response = await fetch(corsIllustration);
       const filterResults = await response.json();
       console.log(filterResults);
       loadMore.style.display = "none";
@@ -164,13 +167,14 @@ filterIllustration.addEventListener('click', function() {
 
 })
 
-const musicUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=5&_embed";
+const musicUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?categories=5&_embed";
+const corsMusic = "https://noroffcors.herokuapp.com/" + musicUrl;
 const filterMusic = document.querySelector('.filter-music');
 filterMusic.addEventListener('click', function() {
   
   async function filter() {
     try {
-      const response = await fetch(musicUrl);
+      const response = await fetch(corsMusic);
       const filterResults = await response.json();
       console.log(filterResults);
       loadMore.style.display = "none";
@@ -192,13 +196,14 @@ filterMusic.addEventListener('click', function() {
 
 })
 
-const filmUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=3&_embed";
+const filmUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?categories=3&_embed";
+const corsFilm = "https://noroffcors.herokuapp.com/" + filmUrl;
 const filterFilm = document.querySelector('.filter-film');
 filterFilm.addEventListener('click', function() {
   
   async function filter() {
     try {
-      const response = await fetch(filmUrl);
+      const response = await fetch(corsFilm);
       const filterResults = await response.json();
       console.log(filterResults);
       loadMore.style.display = "none";
