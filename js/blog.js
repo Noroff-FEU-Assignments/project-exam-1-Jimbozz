@@ -30,7 +30,7 @@ async function getPosts() {
     
           if(clicked) { 
             blogContainer.innerHTML = "";
-            createHTML(newResults)
+            createHTML(newResults);
             
             loadMore.style.display = "none";
 
@@ -73,12 +73,149 @@ function createHTML(posts) {
 }
 
 
+//Filter buttons functions
+
+var clicked = false;
+
+const filterAll = document.querySelector('.filter-all');
+const allUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=1&per_page=20&_embed";
+
+filterAll.addEventListener('click', function() {
+  
+  async function filter() {
+    try {
+      const response = await fetch(allUrl);
+      const filterResults = await response.json();
+      console.log(filterResults);
+      clicked = true
+      
+      if(clicked) { 
+        blogContainer.innerHTML = "";
+        createHTML(filterResults)
+        loadMore.style.display = "none";
+        
+      }else {
+        false
+      }
+    }
+    catch(error) {
+      console.log(error);
+    }
+  }
+  filter();
+  
+  
+})
 
 
+const photoUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=2&_embed";
+const filterPhotography = document.querySelector('.filter-photo');
+filterPhotography.addEventListener('click', function() {
+  
+  async function filter() {
+    try {
+      const response = await fetch(photoUrl);
+      const filterResults = await response.json();
+      console.log(filterResults);
+      loadMore.style.display = "none";
+      clicked = true
+      
+      if(clicked) { 
+        blogContainer.innerHTML = "";
+        createHTML(filterResults)
+        
+      }else {
+        false
+      }
+    }
+    catch(error) {
+      console.log(error);
+    }
+  }
+  filter();
 
+})
 
+const illustrationUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=4&_embed";
+const filterIllustration = document.querySelector('.filter-illustration');
+filterIllustration.addEventListener('click', function() {
+  
+  async function filter() {
+    try {
+      const response = await fetch(illustrationUrl);
+      const filterResults = await response.json();
+      console.log(filterResults);
+      loadMore.style.display = "none";
+      clicked = true
+      
+      if(clicked) { 
+        blogContainer.innerHTML = "";
+        createHTML(filterResults)
 
+      }else {
+        false
+      }
+    }
+    catch(error) {
+      console.log(error);
+    }
+  }
+  filter();
 
+})
 
+const musicUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=5&_embed";
+const filterMusic = document.querySelector('.filter-music');
+filterMusic.addEventListener('click', function() {
+  
+  async function filter() {
+    try {
+      const response = await fetch(musicUrl);
+      const filterResults = await response.json();
+      console.log(filterResults);
+      loadMore.style.display = "none";
+      clicked = true
+      
+      if(clicked) { 
+        blogContainer.innerHTML = "";
+        createHTML(filterResults)
 
+      }else {
+        false
+      }
+    }
+    catch(error) {
+      console.log(error);
+    }
+  }
+  filter();
 
+})
+
+const filmUrl = "http://localhost/makers/wp-json/wp/v2/posts?categories=3&_embed";
+const filterFilm = document.querySelector('.filter-film');
+filterFilm.addEventListener('click', function() {
+  
+  async function filter() {
+    try {
+      const response = await fetch(filmUrl);
+      const filterResults = await response.json();
+      console.log(filterResults);
+      loadMore.style.display = "none";
+      clicked = true
+      
+      if(clicked) {
+        blogContainer.innerHTML = "";
+        createHTML(filterResults)
+
+      }else {
+        false
+      }
+    }
+    catch(error) {
+      console.log(error);
+    }
+  }
+  filter();
+
+})
