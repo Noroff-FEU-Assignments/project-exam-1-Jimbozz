@@ -12,11 +12,8 @@ async function getPosts() {
   try {
     const response = await fetch(corsEnabledOne);
     const getResults = await response.json();
-    createHTML(getResults)
-    
-    console.log(getResults);
-
-    var clicked = false
+    createHTML(getResults);
+    let clicked = false;
 
     loadMore.addEventListener('click', function() {
 
@@ -24,14 +21,12 @@ async function getPosts() {
         try {
           const response = await fetch(corsEnabledTwo);
           const newResults = await response.json();
-          console.log(newResults);
 
           clicked = true
     
           if(clicked) { 
             blogContainer.innerHTML = "";
             createHTML(newResults);
-            
             loadMore.style.display = "none";
 
           }else {
@@ -75,7 +70,7 @@ function createHTML(posts) {
 
 //Filter buttons functions
 
-var clicked = false;
+let clicked = false;
 
 const filterAll = document.querySelector('.filter-all');
 const allUrl = "http://makerstories.no/index.php/wp-json/wp/v2/posts?categories=1&per_page=20&_embed";
@@ -87,7 +82,6 @@ filterAll.addEventListener('click', function() {
     try {
       const response = await fetch(corsAll);
       const filterResults = await response.json();
-      console.log(filterResults);
       clicked = true
       
       if(clicked) { 
@@ -118,7 +112,6 @@ filterPhotography.addEventListener('click', function() {
     try {
       const response = await fetch(corsPhoto);
       const filterResults = await response.json();
-      console.log(filterResults);
       loadMore.style.display = "none";
       clicked = true
       
@@ -147,7 +140,6 @@ filterIllustration.addEventListener('click', function() {
     try {
       const response = await fetch(corsIllustration);
       const filterResults = await response.json();
-      console.log(filterResults);
       loadMore.style.display = "none";
       clicked = true
       
@@ -176,7 +168,6 @@ filterMusic.addEventListener('click', function() {
     try {
       const response = await fetch(corsMusic);
       const filterResults = await response.json();
-      console.log(filterResults);
       loadMore.style.display = "none";
       clicked = true
       
@@ -205,7 +196,6 @@ filterFilm.addEventListener('click', function() {
     try {
       const response = await fetch(corsFilm);
       const filterResults = await response.json();
-      console.log(filterResults);
       loadMore.style.display = "none";
       clicked = true
       
