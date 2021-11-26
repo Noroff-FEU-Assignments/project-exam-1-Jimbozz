@@ -31,21 +31,21 @@ async function getPosts() {
           if(clicked) { 
             blogContainer.innerHTML = "";
             createHTML(newResults)
+            
+            loadMore.style.display = "none";
 
           }else {
            false
           }
         }
         catch(error) {
-          console.log("this is an error");
+          console.log(error);
         }
       }
       morePosts();
-    })
-     
+    })   
   }
   catch(error) {
-    console.log("what happened here!");
     console.log(error);
   }
 }
