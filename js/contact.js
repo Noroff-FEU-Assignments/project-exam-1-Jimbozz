@@ -14,20 +14,22 @@ async function sendForm(event) {
 
     method: form.method,
     body: new FormData(form)
+    
   });
     const data = await response.json();
+    console.log("fetched");
 
    
   }catch(error) {
     console.warn(error);
 
-    form.onsubmit = function formSuccess() {
-      form.innerHTML = `
-                      <div class="success"> Your form was submitted successfully.
-                      </div>
-                        `
-    }
   }
 }
 
 
+// form.onsubmit = function formSuccess() {
+//   form.innerHTML = `
+//                   <div class="success"> Your form was submitted successfully.
+//                   </div>
+//                     `
+// }

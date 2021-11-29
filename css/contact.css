@@ -59,13 +59,13 @@ textarea {
   background: var(--warning);
 }
 
-.form-control:valid + .error-message {
+/* .form-control:valid + .error-message {
   display: none;
 }
 
 .form-control:invalid + .error-message {
   display: block;
-}
+} */
 
 
 
@@ -96,9 +96,22 @@ textarea {
 
 
 ------
-.form-control:placeholder-shown {
+/* .form-control:placeholder-shown {
   border-color: black;
 }
 .form-control:placeholder-shown + small {
   display: none;
+} */
+
+----
+
+input:focus {
+  outline: none;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+  border-color: red;
+}
+input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+  display: block; 
 }

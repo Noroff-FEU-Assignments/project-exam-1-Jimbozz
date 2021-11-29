@@ -48,17 +48,20 @@
   </header>
   <main>
     <div class="form-container">
-      <form id="contact-form" action="" method="post">
+      <form id="contact-form" action="https://www.makerstories.no/wp-json/contact-form-7/v1/contact-forms/138/feedback" method="post">
         <div class="form-styles">
           <label for="nameInput">Name*</label>
           <input class="form-control" id="nameInput" type="text" name="name" minlength="5" required placeholder="Name here" title="Should be more than 5 characters long">
+          <small class="error-message">Please enter a valid e-mail address</small>
           <label for="emailInput">Email*</label>
           <input class="form-control" id="emailInput" type="email" name="email" required placeholder="name@example.com">
           <small class="error-message">Please enter a valid e-mail address</small>
           <label for="subjectInput">Subject*</label>
           <input class="form-control" id="subjectInput" type="text" name="subject" minlength="15" maxlength="50" required placeholder="Subject here" title="Should be more than 15 characters long">
+          <small class="error-message">Please enter a valid e-mail address</small>
           <label for="messageInput">Message*</label>
           <textarea class="form-control" id="messageInput" type="text" name="message" cols="30" rows="10" minlength="25" required placeholder="Message here" title="Should be more than 25 characters long"></textarea>
+          <small class="error-message">Please enter a valid e-mail address</small>
           <button class="contact-button">Submit</button>
         </div>
       </form>
