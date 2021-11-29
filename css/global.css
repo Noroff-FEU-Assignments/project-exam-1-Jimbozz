@@ -156,23 +156,6 @@ footer {
   color: var(--color-nav-links);
 }
 
-.blog-content {
-  display: none;
-  padding: 0;
-  margin-top: 10px;
-}
-
-.blog-button {
-  background: none;
-  border: none;
-  color: white;
-}
-
-.secondary {
-  font-family: var(--text-paragraph);
-}
-
-
 
 /*HORIZONTAL SCROLLING BLOG CARDS*/
 
