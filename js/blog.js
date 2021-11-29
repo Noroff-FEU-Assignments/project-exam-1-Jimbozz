@@ -59,7 +59,7 @@ function createHTML(posts) {
       <article class="blog-card">
         <img class="blog-image" src="${image}" alt="${imageText}">
         <address class="author">${post._embedded.author[0].name}</address>
-        <h4 class="blog-card-title">${post.title.rendered}</h4>
+        <div class="blog-card-title">${post.title.rendered}</div>
       </article>
     </a>`
     ;

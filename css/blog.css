@@ -35,6 +35,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .filter-all, .filter-photo, .filter-illustration, .filter-music, .filter-film {
@@ -42,7 +43,7 @@
   border: none;
   font-family: var(--text-paragraph);
   font-size: 1rem;
-  color: #959595;
+  color: #4b4b4b;
   cursor: pointer;
 }
 .filter-selection:hover {

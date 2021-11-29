@@ -35,14 +35,7 @@ blogButton.addEventListener('click',function() {
    }
 })
 
-//Function for footer email signup
 
-
-
-const formEnd = "http://www.makerstories.no/wp-json/contact-form-7/v1/contact-forms/138/feedback";
-const corsFooter = "https://noroffcors.herokuapp.com/" + formEnd;
-
-// const footerForm = document.querySelector('.footer-form').action = corsFooter;
 
 
 

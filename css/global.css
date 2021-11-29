@@ -28,7 +28,7 @@ body {
 }
 
 
-h1, h2, h3, h4, .nav-style {
+h1, h2, h3, h4, .nav-style, .blog-card-title {
   font-family: var(--text-heading), sans-serif, Verdana, Geneva, Tahoma, sans-serif;
 }
 
