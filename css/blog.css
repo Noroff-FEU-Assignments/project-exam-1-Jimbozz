@@ -46,13 +46,9 @@
   color: #4b4b4b;
   cursor: pointer;
 }
-.filter-selection:hover {
+
+.filter-all:focus, .filter-photo:focus, .filter-illustration:focus, .filter-music:focus, .filter-film:focus {
   text-decoration: underline;
-  color: var(--color-text);
-}
-.filter-selection:focus {
-  text-decoration: underline;
-  color: var(--color-text);
 }
 
 /*MORE BUTTON*/

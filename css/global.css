@@ -78,7 +78,8 @@ footer {
 /*NAVIGATION*/
 
 .logo {
-  width: 130px;
+  width: 8rem;
+  height: 100%;
   display: block;
 }
 
