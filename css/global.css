@@ -263,10 +263,20 @@ footer {
   border: 1px solid white;
   border-radius: 1px;
   width: 50vw;
+  height: 4rem;
   min-width: 300px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+#emailInput {
+  color: white;
+  border: none;
+  background: none;
+  height: 100%;
+  width: 100%;
 }
 
 .footer-form-wrapper {

@@ -42,7 +42,7 @@ blogButton.addEventListener('click',function() {
 const formEnd = "http://www.makerstories.no/wp-json/contact-form-7/v1/contact-forms/138/feedback";
 const corsFooter = "https://noroffcors.herokuapp.com/" + formEnd;
 
-const footerForm = document.querySelector('.footer-form').action = corsFooter;
+// const footerForm = document.querySelector('.footer-form').action = corsFooter;
 
 
 
