@@ -8,7 +8,7 @@ async function sendForm(event) {
   event.preventDefault();
 
   const form = event.target;
-
+  const error = document.querySelector('.error-message');
 
   try {
 
@@ -21,10 +21,12 @@ async function sendForm(event) {
   });
   console.log(response);
     const data = await response.json();
+    
     console.log("fetched");
 
-    // const result = JSON.parse(data);
-    // console.log(result);
+    // if(input === invalid) {
+    //   error.display.style = "block";
+    // }
    
    
   }catch(error) {
@@ -32,6 +34,9 @@ async function sendForm(event) {
 
   }
 }
+
+
+
 
 
 
@@ -69,3 +74,28 @@ async function sendForm(event) {
 // const formElement = document.querySelector('form#contact-form');
 
 
+
+
+// const normalizeContactForm7Response = (response) => {
+//   // The other possible statuses are different kind of errors
+//   const isSuccess = response.status === 'mail_sent';
+//   // A message is provided for all statuses
+//   const message = response.message;
+//   const validationError = isSuccess
+//     ? {}
+//     : // We transform an array of objects into an object
+//     Object.fromEntries(
+//       response.invalid_fields.map((error) => {
+//         // Extracts the part after "cf7-form-control-wrap"
+//         const key = /cf7[-a-z]*.(.*)/.exec(error.into)[1];
+
+//         return [key, error.message];
+//       })
+//     );
+
+//   return {
+//     isSuccess,
+//     message,
+//     validationError,
+//   };
+// };
