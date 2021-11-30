@@ -22,6 +22,9 @@ async function sendForm(event) {
   console.log(response);
     const data = await response.json();
     console.log("fetched");
+
+    // const result = JSON.parse(data);
+    // console.log(result);
    
    
   }catch(error) {
