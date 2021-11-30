@@ -1,5 +1,6 @@
 const form = document.querySelector('form#contact-form');
 
+
 form.addEventListener('submit', sendForm);
   
 
@@ -8,6 +9,7 @@ async function sendForm(event) {
 
   const form = event.target;
 
+
   try {
 
     const response = await fetch(form.action, {
@@ -15,10 +17,12 @@ async function sendForm(event) {
     method: form.method,
     body: new FormData(form)
     
+    
   });
+  console.log(response);
     const data = await response.json();
     console.log("fetched");
-
+   
    
   }catch(error) {
     console.warn(error);
