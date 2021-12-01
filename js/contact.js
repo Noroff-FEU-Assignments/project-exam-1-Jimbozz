@@ -53,20 +53,19 @@ const formSubmissionHandler = (event) => {
     body
   })
     .then((response) => response.json())
-    .then((response) => {
-      // Determine if the submission is not valid
-      if (isFormSubmissionError(response)) {
-        // Handle the case when there are validation errors
+    // .then((response) => {
+    //   // Determine if the submission is not valid
+    //   if (isFormSubmissionError(response)) {
+    //     // Handle the case when there are validation errors
         
-          // formElement.innerHTML = `
-          //                 <div class="success"> Your form was submitted successfully.
-          //                 </div>
-          //                   `
-        
-      }
-      // Handle the happy path
+    
+    //   }
+
+    //   // Handle the happy path
       
-    })
+      
+
+    // })
     .catch((error) => {
       // Handle the case when there's a problem with the request
     });
@@ -76,27 +75,21 @@ const formElement = document.querySelector('form#contact-form');
 
 
 
+const errorName = document.querySelector('.error-name');
+const yourName = document.getElementById('your-name');
+const thanks = document.getElementById('thanks');
 
-// const normalizeContactForm7Response = (response) => {
-//   // The other possible statuses are different kind of errors
-//   const isSuccess = response.status === 'mail_sent';
-//   // A message is provided for all statuses
-//   const message = response.message;
-//   const validationError = isSuccess
-//     ? {}
-//     : // We transform an array of objects into an object
-//     Object.fromEntries(
-//       response.invalid_fields.map((error) => {
-//         // Extracts the part after "cf7-form-control-wrap"
-//         const key = /cf7[-a-z]*.(.*)/.exec(error.into)[1];
+yourName.oninvalid = invalid;
+formElement.onsubmit = submit;
 
-//         return [key, error.message];
-//       })
-//     );
+function invalid(event) {
+  errorName.removeAttribute('hidden');
+}
 
-//   return {
-//     isSuccess,
-//     message,
-//     validationError,
-//   };
-// };
+function submit(event) {
+  formElement.setAttribute('hidden', '');
+  thanks.removeAttribute('hidden');
+
+  // For this example, don't actually submit the form
+  // event.preventDefault();
+}

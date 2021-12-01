@@ -52,19 +52,20 @@
         <div class="form-styles">
           <label for="your-name">Name*</label>
           <input class="form-control" id="your-name" type="text" name="your-name" minlength="5" required placeholder="Name here" title="Should be more than 5 characters long">
-          <small class="error-message">Please enter a valid e-mail address</small>
+          <small class="error-name" hidden>Please enter a valid e-mail address</small>
           <label for="your-email">Email*</label>
           <input class="form-control" id="your-email" type="email" name="your-email" required placeholder="name@example.com">
-          <small class="error-message">Please enter a valid e-mail address</small>
+          <small class="error-message" hidden>Please enter a valid e-mail address</small>
           <label for="your-subject">Subject*</label>
           <input class="form-control" id="your-subject" type="text" name="your-subject" minlength="15" maxlength="50" required placeholder="Subject here" title="Should be more than 15 characters long">
-          <small class="error-message">Please enter a valid e-mail address</small>
+          <small class="error-message" hidden>Please enter a valid e-mail address</small>
           <label for="your-message">Message*</label>
           <textarea class="form-control" id="your-message" type="text" name="your-message" cols="30" rows="10" minlength="25" required placeholder="Message here" title="Should be more than 25 characters long"></textarea>
-          <small class="error-message">Please enter a valid e-mail address</small>
-          <button class="contact-button">Submit</button>
+          <small class="error-message" hidden>Please enter a valid e-mail address</small>
+          <button type="submit" class="contact-button">Submit</button>
         </div>
       </form>
+      <p id="thanks" hidden>Your data has been received. Thanks!</p>
     </div>
 
   </main>

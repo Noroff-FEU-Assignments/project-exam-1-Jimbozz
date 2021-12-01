@@ -109,9 +109,9 @@ input:focus {
   outline: none;
 }
 
-input:not(:focus):not(:placeholder-shown):invalid {
+/* input:not(:focus):not(:placeholder-shown):invalid {
   border-color: red;
 }
 input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
   display: block; 
-}
+} */
