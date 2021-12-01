@@ -52,22 +52,12 @@ textarea {
 
 .form-control:valid {
   border: 1px solid var(--color-success);
-  background: green;
+  
 }
 
-.form-control:invalid {
-  background: var(--warning);
+input:not(:focus):not(:placeholder-shown):invalid {
+  border-color: red;
 }
-
-/* .form-control:valid + .error-message {
-  display: none;
-}
-
-.form-control:invalid + .error-message {
-  display: block;
-} */
-
-
 
 
 [placeholder]::-webkit-input-placeholder { color: #8D8D8D; }
@@ -88,30 +78,9 @@ textarea {
 
 [placeholder]:focus:-ms-input-placeholder { color: transparent; }
 
-
-.error-message {
-  display: none;
-  color: red;
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #f9e8d9 inset !important;
 }
-
-
-------
-/* .form-control:placeholder-shown {
-  border-color: black;
-}
-.form-control:placeholder-shown + small {
-  display: none;
-} */
-
-----
-
-input:focus {
-  outline: none;
-}
-
-/* input:not(:focus):not(:placeholder-shown):invalid {
-  border-color: red;
-}
-input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
-  display: block; 
-} */
