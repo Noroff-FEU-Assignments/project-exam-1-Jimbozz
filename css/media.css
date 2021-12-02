@@ -13,7 +13,7 @@
   /*blog page - layout*/
 
   .blog-container {
-    margin: 30px;
+    margin: 15px;
   }
 
   .blog-image {
@@ -54,6 +54,11 @@
 
   /*home page - featured layout*/
 
+  .featured-container {
+    margin: 70px 0px;
+    gap: 5rem;
+  }
+
   .featured-container > .blog-link:first-child > article {
     flex-direction: row;
     flex-wrap: wrap-reverse;
@@ -66,6 +71,21 @@
     flex-wrap: wrap-reverse;
   }
 
+  .latest-posts {
+    margin: 85px 0px;
+  }
+
+  /*home page - footer*/
+
+  .footer-form {
+    width: 80vw;
+  }
+
+  /*about page*/
+
+  .about-content {
+    width: 80vw;
+  }
 }
 
 /*MEDIUM VIEWPORT*/
