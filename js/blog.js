@@ -14,6 +14,7 @@ async function getPosts() {
     const getResults = await response.json();
     createHTML(getResults);
     let clicked = false;
+    console.log(getResults);
 
     loadMore.addEventListener('click', function() {
 
@@ -50,8 +51,8 @@ getPosts();
 
 function createHTML(posts) {
   posts.forEach(function(post) {
-    let image = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
-    let imageText = post._embedded["wp:featuredmedia"][0].alt_text;
+    const image = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+    const imageText = post._embedded["wp:featuredmedia"][0].alt_text;
     
 
     blogContainer.innerHTML += `
