@@ -50,7 +50,7 @@ function createPosts(posts) {
               <img class="blog-card-image" src="${blogImage}" alt="${imageText}">
               <div class="article-details">
                 <address class="author">${post._embedded.author[0].name}</address>
-                <h4 class="blog-card-title">${post.title.rendered}</h4>
+                <div class="blog-card-title">${post.title.rendered}</div>
               </div>
             </article>
           </a>`
@@ -93,7 +93,7 @@ function createCards(posts) {
               <img class="blog-card-image" src="${blogImage}" alt="${imageText}">
               <div class="article-details">
                 <address class="author">${post._embedded.author[0].name}</address>
-                <h4 class="blog-card-title">${post.title.rendered}</h4>
+                <div class="blog-card-title">${post.title.rendered}</div>
               </div>
             </article>
           </a>`
