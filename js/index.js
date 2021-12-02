@@ -24,18 +24,20 @@ getHero();
 
 function createHero(post) {
 
-  let heroContainer = document.querySelector('.hero');
-  let image = post[0]._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
-  let genre = post[0]._embedded["wp:term"][0][0].name;
+  const heroContainer = document.querySelector('.hero');
+  const image = post[0]._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+  const genre = post[0]._embedded["wp:term"][0][0].name;
+  const title = post[0]._embedded["wp:featuredmedia"][0].alt_text;
   
   
   heroContainer.style.backgroundImage = `url(${image})`;
+  heroContainer.title = title;
     
 
     heroContainer.innerHTML += `
     <div class="hero-text">
       <div class="genre">${genre}</div>
-      <a class="hero-title-link" href="/blog-article.html?id=${post[0].id}">
+      <a title="${post[0].title.rendered}" class="hero-title-link" href="/blog-article.html?id=${post[0].id}">
         <h1 class="hero-title">${post[0].title.rendered}</h1>
       </a> 
     </div>`
@@ -78,21 +80,22 @@ function createFeatured(posts) {
   
   posts.forEach(function(post) {
 
-    var featureImage = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+    const featureImage = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+    const altText = post._embedded["wp:featuredmedia"][0].alt_text;
     
 
-    var featuredContainer = document.querySelector('.featured-container');
+    const featuredContainer = document.querySelector('.featured-container');
 
    
    
     featuredContainer.innerHTML += `
-        <a class="blog-link" href="/blog-article.html?id=${post.id}">
+        <a title="${post.title.rendered}" class="blog-link" href="/blog-article.html?id=${post.id}">
           <article class="featured-post">
             <div class="featured-text-container">
               <h4 class="featured-title">${post.title.rendered}</h4>
               <p class="featured-description">${post.excerpt.rendered}</p>
             </div>
-            <img class="featured-image" src="${featureImage}" />
+            <img class="featured-image" src="${featureImage}" alt="${altText}">
           </article>
         </a>`
     ; 

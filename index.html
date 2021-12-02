@@ -48,7 +48,6 @@
   </header>
   <main>
     <section class="hero">
-      
     </section>
     <section class="latest-posts">
       <div class="scrolling-text">
@@ -78,7 +77,7 @@
       </div>
     </section>
     <section class="contact-us">
-      <a class="contact-contents" href="#">
+      <a title="contact us" class="contact-contents" href="/contact.html">
         <h2>
           We want to hear your stories. Get in touch if you have a story to tell.
         </h2>
@@ -109,7 +108,8 @@
       <div class="footer-form-wrapper">
         <h3 class="footer-heading">Get stories straight to your inbox?</h3>
         <form class="footer-form" action="https://noroffcors.herokuapp.com/http://www.makerstories.no/wp-json/contact-form-7/v1/contact-forms/138/feedback" method="post">
-          <input class="form-control" id="emailFooter" type="email" name="email" required placeholder="name@example.com">
+          <label for="email-footer">Email:</label>
+          <input class="form-control" id="email-footer" type="email" name="email" required placeholder=" name@example.com">
             <button class="footer-button" value="submit">
               <div class="arrow-button">
                 <i class="fas fa-chevron-right"></i>

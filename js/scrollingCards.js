@@ -40,13 +40,14 @@ getCards();
 function createPosts(posts) {
   posts.forEach(function(post) {
 
-    let blogImage = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+    const blogImage = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+    const imageText = post._embedded["wp:featuredmedia"][0].alt_text;
     
     
     container.innerHTML += `
-          <a class="blog-link" href="/blog-article.html?id=${post.id}">
+          <a title="${post.title.rendered}" class="blog-link" href="/blog-article.html?id=${post.id}">
             <article class="blog-card">
-              <img class="blog-card-image" src="${blogImage}"/>
+              <img class="blog-card-image" src="${blogImage}" alt="${imageText}">
               <div class="article-details">
                 <address class="author">${post._embedded.author[0].name}</address>
                 <h4 class="blog-card-title">${post.title.rendered}</h4>
@@ -82,14 +83,14 @@ function buttonClicks() {
 function createCards(posts) {
   posts.forEach(function(post) {
 
-    
-    let blogImage = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+    const imageText = post._embedded["wp:featuredmedia"][0].alt_text;
+    const blogImage = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
     
     
     photoWrapper.innerHTML += `
-          <a class="blog-link" href="/blog-article.html?id=${post.id}">
+          <a title="${post.title.rendered}" class="blog-link" href="/blog-article.html?id=${post.id}">
             <article class="blog-card">
-              <img class="blog-card-image" src="${blogImage}"/>
+              <img class="blog-card-image" src="${blogImage}" alt="${imageText}">
               <div class="article-details">
                 <address class="author">${post._embedded.author[0].name}</address>
                 <h4 class="blog-card-title">${post.title.rendered}</h4>

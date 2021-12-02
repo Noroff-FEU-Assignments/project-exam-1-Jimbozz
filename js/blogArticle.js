@@ -45,13 +45,14 @@ blogInfo();
 
 function createHTML(result) {
   
-  let image = result._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url;
-  let genre = result._embedded["wp:term"][0][0].slug;
-  let genreUp = genre.charAt(0).toUpperCase() + genre.slice(1);
-
+  const image = result._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url;
+  const genre = result._embedded["wp:term"][0][0].slug;
+  const genreUp = genre.charAt(0).toUpperCase() + genre.slice(1);
+  const title = result._embedded["wp:featuredmedia"][0].alt_text;
   
 
   headerImage.style.backgroundImage = `url(${image})`;
+  headerImage.title = title;
 
   let htmlString = "";
 
