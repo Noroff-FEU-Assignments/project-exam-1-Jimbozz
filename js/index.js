@@ -10,7 +10,7 @@ function removeSplash() {
     document.addEventListener('DOMContentLoaded', function(event) {
       setTimeout(function() {
         splash.classList.add('display-none');
-      }, 8000);
+      }, 7000);
     })
   }
   else {
