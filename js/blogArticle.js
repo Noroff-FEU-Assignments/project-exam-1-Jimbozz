@@ -7,14 +7,11 @@ const title = document.querySelector('title');
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get('id');
-const finalId = parseInt(id)
-
-
+const finalId = parseInt(id);
 
 const url = "http://makerstories.no/index.php/wp-json/wp/v2/posts/" + finalId + "?&_embed";
 
 const corsEnabledArticle = "https://noroffcors.herokuapp.com/" + url;
-
 
 
 async function blogInfo() {
@@ -24,8 +21,6 @@ async function blogInfo() {
    
     title.innerHTML = `${result.title.rendered}`;
     wrapper.innerHTML = "";
-
-    
     createHTML(result);
     createModal();
 
@@ -35,7 +30,6 @@ async function blogInfo() {
   }
 
 }
-
 
 blogInfo();
 
@@ -86,19 +80,18 @@ function createModal() {
   for (let figure of figures) {
 
     //Inserts close button
-    var node = document.createElement("I"); 
+    const node = document.createElement("I"); 
     document.querySelector("figure").appendChild(node);
-    node.className = "fas fa-times"
+    node.className = "fas fa-times";
 
     figure.addEventListener("click", function() {
       
       clicked = true
   
-        if(clicked) { 
-          figure.classList.toggle("modal");
-          
-          node.style.display = "block";
-        }
+      if(clicked) { 
+        figure.classList.toggle("modal");
+        node.style.display = "block";
+      }
     
     });
   }

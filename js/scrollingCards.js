@@ -12,9 +12,7 @@ async function getCards() {
   try {
     const response = await fetch(corsEnabledPosts);
     const results = await response.json();
-    console.log(results);
     createPosts(results);
-    
     buttonClicks();
     
   }
@@ -24,14 +22,12 @@ async function getCards() {
   try {
     const response = await fetch(corsEnabledPhoto);
     const results = await response.json();
-    console.log(results);
     createCards(results)
     buttonClicks2();
   }
   catch(error) {
     console.log(error);
   }
-
 }
 
 getCards();
@@ -42,7 +38,6 @@ function createPosts(posts) {
 
     const blogImage = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
     const imageText = post._embedded["wp:featuredmedia"][0].alt_text;
-    
     
     container.innerHTML += `
           <a title="${post.title.rendered}" class="blog-link" href="/blog-article.html?id=${post.id}">
@@ -55,7 +50,6 @@ function createPosts(posts) {
             </article>
           </a>`
     ;
-      
   })
 }
 
@@ -68,14 +62,11 @@ function buttonClicks() {
 
   buttonR.onclick = function () {
     container.scrollLeft += 900;
-    
   };
+
   buttonL.onclick = function () {
     container.scrollLeft += -900;
-   
   };
-
-
 }
 
 //Function to create scrolling cards for photography genre on homepage.
@@ -111,8 +102,8 @@ function buttonClicks2() {
   buttonR.onclick = function () {
     photoWrapper.scrollLeft +=900;
   };
+
   buttonL.onclick = function () {
     photoWrapper.scrollLeft += -900;
   };
-
 }

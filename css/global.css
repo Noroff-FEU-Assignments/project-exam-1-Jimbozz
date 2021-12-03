@@ -1,7 +1,6 @@
 @import "/css/imports/variables.css";
 @import "/css/imports/links.css";
 
-
 html {
   font-size: 100%;
 }
@@ -26,7 +25,6 @@ body {
 	padding: 0;
   color: var(--color-text);
 }
-
 
 h1, h2, h3, h4, .nav-style, .blog-card-title {
   font-family: var(--text-heading), sans-serif, Verdana, Geneva, Tahoma, sans-serif;
@@ -73,7 +71,6 @@ footer {
   min-height: 80vh;
   background-color: var(--color-text);
 }
-
 
 /*NAVIGATION*/
 
@@ -156,7 +153,6 @@ footer {
   color: var(--color-nav-links);
 }
 
-
 /*HORIZONTAL SCROLLING BLOG CARDS*/
 
 .scrolling-cards {
@@ -178,11 +174,6 @@ footer {
 .blog-card-title, .author {
   margin-top: 13px;
 }
-
-/* .blog-card {
-  width: 35vw;
-  height: auto;
-} */
 
 .blog-card-image {
   width: 40vw;
@@ -248,7 +239,6 @@ footer {
   border-radius: 1px;
   width: 50vw;
   height: 4rem;
-  
   padding: 10px;
   display: inline-flex;
   justify-content: space-between;

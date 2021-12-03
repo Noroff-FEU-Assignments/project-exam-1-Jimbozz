@@ -23,7 +23,7 @@ async function getPosts() {
           const response = await fetch(corsEnabledTwo);
           const newResults = await response.json();
 
-          clicked = true
+          clicked = true;
     
           if(clicked) { 
             blogContainer.innerHTML = "";
@@ -63,8 +63,7 @@ function createHTML(posts) {
         <div class="blog-card-title">${post.title.rendered}</div>
       </article>
     </a>`
-    ;
-      
+    ; 
   })
 }
 
@@ -83,7 +82,7 @@ filterAll.addEventListener('click', function() {
     try {
       const response = await fetch(corsAll);
       const filterResults = await response.json();
-      clicked = true
+      clicked = true;
       
       if(clicked) { 
         blogContainer.innerHTML = "";
@@ -99,8 +98,6 @@ filterAll.addEventListener('click', function() {
     }
   }
   filter();
-  
-  
 })
 
 
@@ -114,7 +111,7 @@ filterPhotography.addEventListener('click', function() {
       const response = await fetch(corsPhoto);
       const filterResults = await response.json();
       loadMore.style.display = "none";
-      clicked = true
+      clicked = true;
       
       if(clicked) { 
         blogContainer.innerHTML = "";
@@ -142,7 +139,7 @@ filterIllustration.addEventListener('click', function() {
       const response = await fetch(corsIllustration);
       const filterResults = await response.json();
       loadMore.style.display = "none";
-      clicked = true
+      clicked = true;
       
       if(clicked) { 
         blogContainer.innerHTML = "";
@@ -170,7 +167,7 @@ filterMusic.addEventListener('click', function() {
       const response = await fetch(corsMusic);
       const filterResults = await response.json();
       loadMore.style.display = "none";
-      clicked = true
+      clicked = true;
       
       if(clicked) { 
         blogContainer.innerHTML = "";
@@ -198,7 +195,7 @@ filterFilm.addEventListener('click', function() {
       const response = await fetch(corsFilm);
       const filterResults = await response.json();
       loadMore.style.display = "none";
-      clicked = true
+      clicked = true;
       
       if(clicked) {
         blogContainer.innerHTML = "";
@@ -213,5 +210,4 @@ filterFilm.addEventListener('click', function() {
     }
   }
   filter();
-
 })

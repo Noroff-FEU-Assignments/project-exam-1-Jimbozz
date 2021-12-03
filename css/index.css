@@ -45,7 +45,6 @@
 .featured-container > .blog-link:first-child > article {
   flex-direction: row-reverse;
   margin-right: 80px;
-  
 }
 
 .featured-container > .blog-link:last-child > article {
@@ -65,7 +64,6 @@
 .featured-post:hover .featured-title {
   text-decoration: underline;
 }
-
 
 /*GET IN TOUCH TO TELL US YOUR STORIES*/
 
@@ -87,14 +85,11 @@
 .contact-contents {
   max-width: 50%;
   color: white;
-  
 }
 
 .contact-contents:hover{
   text-decoration: underline;
 }
-
-
 
 /*WELCOME SPLASH*/
 
@@ -150,5 +145,3 @@
   font-size: 2rem;
   margin-top: 3rem;
 }
-
-

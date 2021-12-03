@@ -65,10 +65,15 @@
           <button type="submit" class="contact-button">Submit</button>
         </div>
       </form>
-      <p id="thanks" hidden>Your data has been received. Thanks!</p>
-      <p id="fail" hidden>There seems to be an issue. Please refresh the page and try again.</p>
+      <div class="validation-pass" id="thanks" hidden>
+        <p>Your form has successfully been submitted. Thanks!</p>
+        <a class="return-button" title="Link back to home page" href="/index.html">Back to Home page</a>
+      </div>
+      <div class="validation-fail" id="fail" hidden>
+        <p>There seems to be an error. Please reload your page and try again.</p>
+        <a class="return-button" title="Link back to home page" href="/index.html">Back to Home page</a>
+      </div>
     </div>
-
   </main>
   <footer>
 

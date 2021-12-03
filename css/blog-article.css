@@ -1,6 +1,3 @@
-
-
-
 .blog-header {
   height: 80vh;
   background:  no-repeat center center fixed;
@@ -47,8 +44,6 @@
 }
 
 .article-title {
-  /* font-size: 1.717rem; */
-  
   font-size: 150%;
 }
 
@@ -89,8 +84,6 @@
   background-color: #000000c7;
 }
 
-
-
 .fa-times {
   display: none;
   color: white;
@@ -99,9 +92,7 @@
   padding: 10px;
   right: 10px;
 }
+
 .fa-times:hover {
   cursor: pointer;
 }
-
-
-

@@ -2,38 +2,34 @@
 
 const formElement = document.querySelector('form#contact-form');
 const thanks = document.getElementById('thanks');
-const fail = document.getElementById('thanks');
+const fail = document.getElementById('fail');
 
 
-function submitSuccess(event) {
+function submitSuccess() {
   formElement.setAttribute('hidden', '');
   thanks.removeAttribute('hidden');
 }
-function submitFail(event) {
+function submitFail() {
   formElement.setAttribute('hidden', '');
   fail.removeAttribute('hidden');
 }
 
-
-
 async function onSubmit(event) {
-  event.preventDefault(); // Stop redirection
+  event.preventDefault(); 
   
   try {
     const response = await fetch(event.target.action, {
       method: formElement.method,
       body: new FormData(formElement)
-      
-               
+         
     });
     const data = await response.json();
     console.log(data);
-    // Do stuff with the response
-    submitSuccess();
     
+    submitSuccess();
 
   } catch(error) {
-    // Show the user an error message that the submission failed
+    
     submitFail();
     console.log(error);
   }
