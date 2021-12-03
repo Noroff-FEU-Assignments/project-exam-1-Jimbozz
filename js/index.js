@@ -1,3 +1,27 @@
+//Splash on homepage.
+
+const splash = document.querySelector('.splash');
+
+
+function removeSplash() {
+    
+  if (sessionStorage.getItem('splash') !== 'true'){
+ 
+    document.addEventListener('DOMContentLoaded', function(event) {
+      setTimeout(function() {
+        splash.classList.add('display-none');
+      }, 8000);
+    })
+  }
+  else {
+    document.querySelector(".splash").style.display = "none";
+    
+  }  
+  sessionStorage.setItem('splash','true');
+    
+}
+removeSplash();
+
 
 //Hero section on homepage.
 async function getHero() {
@@ -11,7 +35,6 @@ async function getHero() {
     const heroResults = await response.json();
     console.log(heroResults);
     createHero(heroResults);
-    
     
   }
   catch(error) {
@@ -28,6 +51,7 @@ function createHero(post) {
   const image = post[0]._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
   const genre = post[0]._embedded["wp:term"][0][0].name;
   const title = post[0]._embedded["wp:featuredmedia"][0].alt_text;
+
   
   
   heroContainer.style.backgroundImage = `url(${image})`;
@@ -44,6 +68,9 @@ function createHero(post) {
     ;   
 
 }
+
+
+
 
 
 //Featured posts section on homepage.
@@ -102,3 +129,6 @@ function createFeatured(posts) {
       
   })
 }
+
+
+
