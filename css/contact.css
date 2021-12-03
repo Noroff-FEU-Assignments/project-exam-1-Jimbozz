@@ -28,7 +28,6 @@ textarea {
 }
 
 
-
 .form-container {
   max-width: 800px;
   width: 100%;
@@ -52,7 +51,11 @@ textarea {
 
 .form-control:valid {
   border: 1px solid var(--color-success);
-  
+}
+
+.form-control:focus + .error-message {
+  visibility: visible;
+  display: block;
 }
 
 input:not(:focus):not(:placeholder-shown):invalid {

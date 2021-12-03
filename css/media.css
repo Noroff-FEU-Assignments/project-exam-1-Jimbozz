@@ -10,6 +10,11 @@
     width: 80vw;
   }
 
+  .wp-block-quote {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
   /*blog page - layout*/
 
   .blog-container {
