@@ -28,7 +28,7 @@
   object-fit: cover;
 }
 
-/*FILTER BUTTONS*/
+/*Filter buttons*/
 
 .filter-container {
   display: flex;
@@ -50,7 +50,7 @@
   text-decoration: underline;
 }
 
-/*MORE BUTTON*/
+/*More button*/
 
 .more-button {
   display: flex;

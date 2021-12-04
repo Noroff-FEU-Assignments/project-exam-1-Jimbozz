@@ -1,4 +1,4 @@
-/*PREVIOUS & NEXT BUTTON*/
+/*Previous & next button*/
 
 .arrow-button {
   height: 50px;
@@ -22,9 +22,27 @@
   padding: 50px 40px;
 }
 
-/*FOOTER EMAIL BUTTON*/
+/*Footer email button*/
 
 .footer-button {
   background: none;
   border: none;
+}
+
+/*More button- blog page*/
+
+.more-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+button:hover {
+  color: var(--color-nav-links);
+}
+
+button {
+  font-size: 1.8rem;
+  border: none;
+  background: none;
 }

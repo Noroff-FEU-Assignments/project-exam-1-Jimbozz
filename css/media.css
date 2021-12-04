@@ -1,4 +1,4 @@
-/*SMALL VIEWPORT*/
+
 @media screen and (max-width: 600px) {
   /*hamburger menu*/
   .nav-unique {
@@ -25,12 +25,17 @@
     height: 22vh;
   }
 
-  
   /*index page - latest posts*/
 
   .blog-card-image {
     width: 15rem;
     height: 10rem;
+  }
+
+  /*index page - hero text*/
+
+  .hero-text {
+    width: 70vw;
   }
 
   /*index page - featured section*/
@@ -93,7 +98,6 @@
   }
 }
 
-/*MEDIUM VIEWPORT*/
 
 @media screen and (max-width: 768px) {
 
@@ -112,29 +116,19 @@
   .blog-container {
     grid-template-columns: 1fr 1fr;
   }
-
-  
-
 }
 
 
-
-
-/* LAPTOP VIEWPORT*/
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1000px) {
   
- 
-
+ .button-wrapper {
+   top: 33%;
+ }
 }
-
-
-
-
-/* LAPTOP L VIEWPORT*/
 
 @media screen and (min-width: 1440px) {
 
- /*INDEX PAGE - LATEST POSTS*/
+ /*index page - latest posts*/
 
  .blog-card-image {
   width: 40vw;
