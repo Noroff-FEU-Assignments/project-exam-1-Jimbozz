@@ -49,21 +49,3 @@
 .filter-all:focus, .filter-photo:focus, .filter-illustration:focus, .filter-music:focus, .filter-film:focus {
   text-decoration: underline;
 }
-
-/*More button*/
-
-.more-button {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0px;
-}
-
-button:hover {
-  color: var(--color-nav-links);
-}
-
-button {
-  font-size: 1.8rem;
-  border: none;
-  background: none;
-}

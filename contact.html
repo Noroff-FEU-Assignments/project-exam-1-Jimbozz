@@ -76,7 +76,28 @@
     </div>
   </main>
   <footer>
-
+    <div class="footer-content">
+      <div class="footer-form-wrapper">
+        <h3 class="footer-heading">Get stories straight to your inbox?</h3>
+        <form class="footer-form" action="https://noroffcors.herokuapp.com/http://www.makerstories.no/wp-json/contact-form-7/v1/contact-forms/138/feedback" method="post">
+          <label for="email-footer">Email:</label>
+          <input class="form-control" id="email-footer" type="email" name="email" required placeholder=" name@example.com">
+            <button class="footer-button" value="submit">
+              <div class="arrow-button">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </button>
+        </form>
+      </div>
+      <div class="footer-links">
+        <ul class="footer-link-layout">
+          <li><a class="footer-link-style" href="/contact.html">Contact</a></li>
+          <li><a class="footer-link-style" href="/about.html">About Us</a></li>
+          <li><a class="footer-link-style" href="#">Facebook</a></li>
+          <li><a class="footer-link-style" href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
   </footer>
   <script src="/js/contact.js"></script>
   <script src="/js/app.js"></script>
