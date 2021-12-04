@@ -1,5 +1,3 @@
-
-
 const formElement = document.querySelector('form#contact-form');
 const thanks = document.getElementById('thanks');
 const fail = document.getElementById('fail');
